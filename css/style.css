@@ -333,7 +333,7 @@ ul { list-style: none; }
   letter-spacing: -0.03em;
 }
 .stat-label {
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   color: var(--text-2);
   line-height: 1.5;
   font-weight: 500;
@@ -343,7 +343,7 @@ ul { list-style: none; }
    SECTION SHARED
    ============================================= */
 .section-eyebrow {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -396,7 +396,7 @@ ul { list-style: none; }
   padding: 5px 13px;
   border-radius: 100px;
   border: 1px solid var(--border-2);
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   font-weight: 500;
   color: var(--text-2);
   background: var(--bg-2);
@@ -448,13 +448,13 @@ ul { list-style: none; }
 .amber-dot  { background: var(--amber); }
 .about-card-list li strong {
   display: block;
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--navy);
   margin-bottom: 2px;
 }
 .about-card-list li span {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: var(--text-2);
   line-height: 1.5;
 }
@@ -498,6 +498,46 @@ ul { list-style: none; }
   color: var(--blue);
   font-size: 1.1rem;
 }
+.expertise-card--wide {
+  grid-column: 1 / -1;
+  background: var(--navy);
+  border-color: var(--navy);
+}
+.expertise-card--wide:hover {
+  background: #0a1f3a;
+  border-color: #0a1f3a;
+  transform: translateY(-3px);
+}
+.expertise-wide-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.expertise-wide-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  flex-shrink: 0;
+}
+.expertise-card.expertise-card--wide h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+.expertise-card.expertise-card--wide p {
+  color: #e2e8f0;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  flex: 1;
+  min-width: 260px;
+}
 .expertise-card h3 {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1rem;
@@ -507,9 +547,9 @@ ul { list-style: none; }
   letter-spacing: -0.01em;
 }
 .expertise-card p {
-  font-size: 0.87rem;
+  font-size: 0.95rem;
   color: var(--text-2);
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 /* =============================================
@@ -579,6 +619,76 @@ ul { list-style: none; }
 }
 
 /* =============================================
+   ARTICLES
+   ============================================= */
+#articles { padding: 112px 0; }
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.article-card.article-card--featured {
+  grid-column: 1 / -1;
+  background: var(--navy);
+  border-color: transparent;
+}
+.article-card.article-card--featured .article-card-tag  { color: var(--amber); }
+.article-card.article-card--featured .article-card-title { color: #ffffff; font-size: 1.2rem; max-width: 640px; }
+.article-card.article-card--featured .article-card-excerpt { color: rgba(255,255,255,0.65); max-width: 600px; }
+.article-card.article-card--featured .article-card-link { color: rgba(255,255,255,0.8); }
+.article-card.article-card--featured .article-card-link:hover { color: var(--amber); }
+.article-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+}
+.article-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+  border-color: var(--border-2);
+}
+.article-card-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+.article-card-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+.article-card-excerpt {
+  font-size: 0.95rem;
+  color: var(--text-2);
+  line-height: 1.75;
+  flex: 1;
+}
+.article-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-top: 4px;
+  transition: gap var(--transition), color var(--transition);
+}
+.article-card-link:hover { color: var(--blue); gap: 10px; }
+.article-card-link span { transition: transform var(--transition); }
+.article-card-link:hover span { transform: translateX(3px); }
+
+/* =============================================
    CONTACT  — dark contrast section
    ============================================= */
 #contact {
@@ -600,6 +710,13 @@ ul { list-style: none; }
   line-height: 1.75;
   margin-bottom: 44px;
 }
+.stats-context {
+  text-align: center;
+  color: var(--text-3);
+  font-size: 0.8rem;
+  margin-top: 16px;
+  letter-spacing: 0.02em;
+}
 .contact-links {
   display: flex;
   justify-content: center;
@@ -614,7 +731,7 @@ ul { list-style: none; }
   border-radius: 8px;
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.15);
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: rgba(255,255,255,0.8);
   transition: all var(--transition);

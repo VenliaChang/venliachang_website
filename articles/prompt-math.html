@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>用數學思維精準下 Prompt | Venlia Chang</title>
+  <meta name="description" content="第一個 Prompt 決定了搜尋空間的起始座標。了解 LLM 的向量本質，讓你問得更精準。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/article.css" />
+</head>
+<body class="article-page">
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Venlia Chang</a>
+      <ul class="nav-links">
+        <li><a href="/#about"     data-i18n="nav-about">關於我</a></li>
+        <li><a href="/#expertise" data-i18n="nav-expertise">專業能力</a></li>
+        <li><a href="/#articles"  data-i18n="nav-articles">文章</a></li>
+        <li><a href="/#contact" class="nav-cta" data-i18n="nav-contact">聯絡我</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="lang-toggle" id="lang-toggle">EN</button>
+        <button class="nav-burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <div class="container">
+      <a href="/" class="article-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        <span data-i18n="back">回到首頁</span>
+      </a>
+      <div class="article-tag" data-i18n="tag">AI · Prompt Engineering</div>
+      <h1 class="article-title">
+        <span class="zh">用數學思維，精準下 Prompt</span>
+        <span class="en">Precision Prompting: A Mathematical Approach to Language Models</span>
+      </h1>
+      <div class="article-meta">
+        <span>Venlia Chang</span>
+        <div class="dot"></div>
+        <span>2025</span>
+        <div class="dot"></div>
+        <span data-i18n="read-time">3 分鐘閱讀</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="article-body">
+    <div class="article-content">
+
+      <!-- ── 中文 ── -->
+      <div class="zh">
+        <p>每次下 Prompt 的瞬間，你的腦袋在轉什麼？</p>
+        <p>怎麼問 AI 才聽得懂？聽說對它強硬一點，準確率更高？有禮貌的「請」，反而讓回答品質打折？</p>
+        <p>身為數學背景出身，我的直覺是——<strong>先問本質</strong>。</p>
+
+        <h2>LLM 的本質是什麼？</h2>
+        <p>文字向量化、向量相似性、文字接龍的條件機率、時間序列、立體的統計權數。白話文：在高維空間裡，看兩個詞的「方向」有多接近。</p>
+
+        <h2>第一個 Prompt，是 AI 的定錨點</h2>
+        <p>第一句話決定了搜尋空間的起始座標。我的習慣是：<strong>先交代背景與輪廓，讓模型校準定位，再進入核心問題</strong>。</p>
+        <p>隨著對話推進，向量不斷疊加，問答的語意空間也逐步擴展。距離當下越近的對話，模型賦予的記憶權重越高——就像昨天的晚餐，永遠比三年前的某頓飯記得更清楚。</p>
+
+        <h2>為什麼「請」反讓準確率下降？</h2>
+        <p>因為模型的核心是向量相似性，而非禮貌判斷。「請」這個字語意資訊量極低，在問題的向量方向上只是多了一個噪點，稀釋了你真正想問的語意密度。</p>
+        <p>理解了底層邏輯，上述現象自然迎刃而解。不過，習慣難改，我還是繼續留著這個噪點。🤗</p>
+      </div>
+
+      <!-- ── English ── -->
+      <div class="en">
+        <p>When you send a prompt to a language model, what's actually going through your mind?</p>
+        <p>How should you phrase things for the model to understand? Some claim that a more forceful tone improves output quality. Others say that polite language like "please" actually hurts performance.</p>
+        <p>As someone trained in mathematics, my instinct is always the same: <strong>start with first principles</strong>.</p>
+
+        <h2>What is an LLM, fundamentally?</h2>
+        <p>Text vectorization. Vector similarity. Conditional probability over token sequences. Time-series memory weighting. In plain terms: a system that measures how similar the <em>direction</em> of two words are in high-dimensional space.</p>
+
+        <h2>Your first prompt sets the anchor</h2>
+        <p>The opening prompt defines the starting coordinate of the model's search space. My approach: <strong>establish context and framing first — let the model calibrate its position before you ask the core question</strong>.</p>
+        <p>As the conversation continues, vectors accumulate. Each exchange expands the semantic territory the model navigates. Recent exchanges carry higher memory weight — the same way you remember yesterday's dinner more clearly than a meal from three years ago.</p>
+
+        <h2>Why does "please" reduce accuracy?</h2>
+        <p>Because the model's core mechanism is vector similarity, not social convention. "Please" carries negligible semantic information — it introduces noise into the directional vector of your query, diluting the signal of what you actually want to know.</p>
+        <p>Once you understand the underlying math, these phenomena follow naturally. That said, old habits die hard. The noise stays. 🤗</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2025 Venlia Chang</span>
+      <span class="footer-sub">AI Data Engineer · venliachang.com</span>
+    </div>
+  </footer>
+
+  <script src="../js/article.js"></script>
+  <script>
+    initArticleLang({
+      zh: {
+        back: '← 回到首頁', tag: 'AI · Prompt Engineering',
+        'read-time': '3 分鐘閱讀',
+        'nav-about': '關於我', 'nav-expertise': '專業能力',
+        'nav-articles': '文章', 'nav-contact': '聯絡我',
+      },
+      en: {
+        back: '← Back to Home', tag: 'AI · Prompt Engineering',
+        'read-time': '3 min read',
+        'nav-about': 'About', 'nav-expertise': 'Expertise',
+        'nav-articles': 'Articles', 'nav-contact': 'Get in Touch',
+      }
+    });
+  </script>
+</body>
+</html>

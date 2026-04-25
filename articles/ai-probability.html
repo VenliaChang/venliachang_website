@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 真的可以這樣用嗎？ | Venlia Chang</title>
+  <meta name="description" content="AI 的本質是機率與統計。了解它的結構性限制，才能在正確的場景發揮它的價值。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/article.css" />
+</head>
+<body class="article-page">
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Venlia Chang</a>
+      <ul class="nav-links">
+        <li><a href="/#about"     data-i18n="nav-about">關於我</a></li>
+        <li><a href="/#expertise" data-i18n="nav-expertise">專業能力</a></li>
+        <li><a href="/#articles"  data-i18n="nav-articles">文章</a></li>
+        <li><a href="/#contact" class="nav-cta" data-i18n="nav-contact">聯絡我</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="lang-toggle" id="lang-toggle">EN</button>
+        <button class="nav-burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <div class="container">
+      <a href="/" class="article-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        <span data-i18n="back">回到首頁</span>
+      </a>
+      <div class="article-tag" data-i18n="tag">AI · Education</div>
+      <h1 class="article-title">
+        <span class="zh">AI 真的可以這樣用嗎？用數學邏輯判斷 AI 的適用邊界</span>
+        <span class="en">Can AI Really Do That? A Logic-Based Framework for Knowing When to Trust It</span>
+      </h1>
+      <div class="article-meta">
+        <span>Venlia Chang</span>
+        <div class="dot"></div>
+        <span>2025</span>
+        <div class="dot"></div>
+        <span data-i18n="read-time">4 分鐘閱讀</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="article-body">
+    <div class="article-content">
+
+      <!-- ── 中文 ── -->
+      <div class="zh">
+        <p>曾看到一位專業人士發文感嘆：現在這個世道，有人不一定相信專家，卻相信 AI 說的話。</p>
+        <p>這個現象讓我想了想——或許我可以寫些什麼，幫助大家輕鬆理解 AI 背後的運作邏輯，從根本上判斷它能做什麼、不能做什麼。</p>
+
+        <h2>傳統程式 vs. AI：一個關鍵差異</h2>
+        <p>傳統程式的核心是條件加邏輯：</p>
+        <pre><code>若消費總價 > 2000，則 折扣 = 10%
+若消費總額 < 1000，則 折扣 = 0%
+其他狀況，則 折扣 = 5%</code></pre>
+        <p>條件有限、固定，且能被明確寫出來。</p>
+        <p>但有些問題，條件是無限的、會隨時間移動的：</p>
+        <ul>
+          <li>如何用程式判別 X 光片是否有腫瘤？（癌症形態千變萬化，條件根本寫不完）</li>
+          <li>如何用程式做開放式語言問答？（表達方式無窮無盡，條件無從設定）</li>
+        </ul>
+        <p>於是有人換了一個思路：<strong>既然無法一刀切，那就用「統計」來估算，哪個答案的「機率」最高？</strong> 這正是 AI 誕生的核心邏輯。</p>
+
+        <h2>AI 的本質：機率與統計</h2>
+        <p><strong>大語言模型（LLM）：</strong>在特定語境下，下一個詞出現的機率最高是哪個？</p>
+        <p><strong>醫療影像辨識（ML）：</strong>這張 X 光片，有腫瘤的機率是多少？</p>
+        <p>既然是機率與統計所構成，就存在本質上的<strong>不確定性</strong>——模型輸出的永遠是「最可能的答案」，而非「絕對正確的答案」。</p>
+
+        <h2>哪些場景不適合交給 AI？</h2>
+        <ul>
+          <li><strong>零容錯的情境</strong>：財務報表、法規遵循文件</li>
+          <li><strong>語意高度相似的領域</strong>：法律文本（細微措辭差異牽一髮而動全身）</li>
+          <li><strong>完全沒有訓練資料的問題</strong>：AI 從未見過的領域，它只能「猜」</li>
+        </ul>
+        <p>反之，創意發想、大數據趨勢預測、圖像辨識分類，則是 AI 能發揮高價值的場域。</p>
+
+        <h2>用 AI 前，先問自己三個問題</h2>
+        <ul>
+          <li>這個場景，我能接受一定程度的錯誤嗎？</li>
+          <li>這個問題，答案之間的語意邊界夠清晰嗎？</li>
+          <li>這個問題，AI 在訓練過程中真的見過類似的案例嗎？</li>
+        </ul>
+        <p>能清楚回答這三個問題，就能做出更明智的 AI 使用判斷。🤗</p>
+      </div>
+
+      <!-- ── English ── -->
+      <div class="en">
+        <p>A professional once posted something that stuck with me: people today are more willing to trust AI than a domain expert.</p>
+        <p>That observation prompted me to write this. Not to critique the trend, but to share the underlying logic — so anyone can make a grounded judgment about when AI is the right tool, and when it isn't.</p>
+
+        <h2>Traditional code vs. AI: one fundamental difference</h2>
+        <p>Traditional software is built on conditions and logic:</p>
+        <pre><code>IF total_spend > 2000 THEN discount = 10%
+IF total_spend < 1000 THEN discount = 0%
+ELSE discount = 5%</code></pre>
+        <p>The conditions are finite, fixed, and explicitly writable.</p>
+        <p>But some problems have conditions that are infinite or shift over time:</p>
+        <ul>
+          <li>How do you write rules to detect cancer in an X-ray? (Tumor morphology varies infinitely — you can't enumerate the conditions.)</li>
+          <li>How do you write rules for open-ended language responses? (Human expression has no fixed structure.)</li>
+        </ul>
+        <p>Someone had a different idea: <strong>if we can't write explicit rules, can we use statistics to find the most probable answer?</strong> That insight is the foundation of modern AI.</p>
+
+        <h2>The nature of AI: probability and statistics</h2>
+        <p><strong>Large language models:</strong> Given this context, what token has the highest probability of coming next?</p>
+        <p><strong>Medical image classification:</strong> Given this scan, what is the probability that a tumor is present?</p>
+        <p>Since AI is built on probability and statistics, it carries inherent <strong>uncertainty</strong>. It always produces the most likely answer — not the objectively correct one.</p>
+
+        <h2>Where AI falls short</h2>
+        <ul>
+          <li><strong>Zero-error-tolerance contexts:</strong> financial statements, legal compliance documents</li>
+          <li><strong>High semantic similarity domains:</strong> legal text, where minor wording differences carry enormous consequence</li>
+          <li><strong>Problems with no training data:</strong> AI can only extrapolate from what it has seen before</li>
+        </ul>
+        <p>Conversely, creative ideation, trend forecasting from large datasets, and image classification are domains where AI can deliver genuine, high-leverage value.</p>
+
+        <h2>Three questions before you use AI</h2>
+        <ul>
+          <li>Can I tolerate a margin of error in this context?</li>
+          <li>Are the semantic boundaries in this problem clear enough?</li>
+          <li>Has AI actually been trained on problems similar to this one?</li>
+        </ul>
+        <p>Answer these honestly, and you'll make far better decisions about where AI earns its place. 🤗</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2025 Venlia Chang</span>
+      <span class="footer-sub">AI Data Engineer · venliachang.com</span>
+    </div>
+  </footer>
+
+  <script src="../js/article.js"></script>
+  <script>
+    initArticleLang({
+      zh: {
+        back: '← 回到首頁', tag: 'AI · Education',
+        'read-time': '4 分鐘閱讀',
+        'nav-about': '關於我', 'nav-expertise': '專業能力',
+        'nav-articles': '文章', 'nav-contact': '聯絡我',
+      },
+      en: {
+        back: '← Back to Home', tag: 'AI · Education',
+        'read-time': '4 min read',
+        'nav-about': 'About', 'nav-expertise': 'Expertise',
+        'nav-articles': 'Articles', 'nav-contact': 'Get in Touch',
+      }
+    });
+  </script>
+</body>
+</html>
