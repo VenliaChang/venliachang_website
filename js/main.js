@@ -242,3 +242,14 @@ const sectionObserver = new IntersectionObserver((entries) => {
 }, { rootMargin: '-40% 0px -55% 0px' });
 
 sections.forEach(s => sectionObserver.observe(s));
+
+/* =============================================
+   COPY EMAIL
+   ============================================= */
+function copyEmail() {
+  navigator.clipboard.writeText('venlia.chang@gmail.com').then(() => {
+    const el = document.getElementById('copy-email-text');
+    el.textContent = 'Copied!';
+    setTimeout(() => { el.textContent = 'venlia.chang@gmail.com'; }, 2000);
+  });
+}

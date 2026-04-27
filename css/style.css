@@ -742,6 +742,10 @@ ul { list-style: none; }
   color: #fff;
   transform: translateY(-2px);
 }
+button.contact-btn {
+  cursor: pointer;
+  font-family: inherit;
+}
 
 /* =============================================
    FOOTER
